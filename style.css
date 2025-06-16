@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 550px;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 32px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.app-title {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    background: transparent;
+    color: #333;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.search-box input::-webkit-search-decoration,
+.search-box input::-webkit-search-cancel-button,
+.search-box input::-webkit-search-results-button,
+.search-box input::-webkit-search-results-decoration {
+    display: none;
+}
+
+.search-box input:-webkit-autofill,
+.search-box input:-webkit-autofill:hover,
+.search-box input:-webkit-autofill:focus {
+    box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-box-shadow: 0 0 0 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.search-btn {
+    background: linear-gradient(145deg, #667eea, #764ba2);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.search-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.search-btn i {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.weather {
+    text-align: center;
+}
+
+.weather-main {
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    padding: 30px;
+    border-radius: 24px;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 15px #d1d1d1,
+                -5px -5px 15px #ffffff;
+}
+
+.weather-icon {
+    width: 140px;
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.2));
+    margin: 20px 0;
+}
+
+.temp {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.city {
+    color: #444;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.condition {
+    color: #666;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.col {
+    flex: 1;
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px #d1d1d1,
+                -5px -5px 15px #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.col:hover {
+    transform: translateY(-5px);
+}
+
+.value {
+    color: #667eea;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 25px;
+    }
+    
+    .app-title {
+        font-size: 2.5rem;
+    }
+    
+    .details {
+        flex-direction: column;
+    }
+    
+    .temp {
+        font-size: 3rem;
+    }
+    
+    .city {
+        font-size: 1.8rem;
+    }
+}
